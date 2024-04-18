@@ -1,19 +1,15 @@
-<script src="https://content.jwplatform.com/libraries/Z79JsmAO.js"></script>
-<div id="jwplayerDiv"></div>
-<script>	
-jwplayer("jwplayerDiv").setup({
-  width: "100%",
-      height: 360,
-      autostart: true,
-    //playlist: [{
-        file: "https://linearjitp02-playback.astro.com.my/dash-wv/linear/2604/default_ott.mpd",
-		//type: "dash",
-	    drm: {
-	        clearkey: {
-	          key: '6776985938b332164b97b81fe566a34a',
-	          keyId: 'efda647dad723563b625be8c05ee6110'
-	        }
-	      }
-   // }]
-});
+<script type="text/javascript" src="https://cdn.jsdelivr.net/clappr/latest/clappr.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/clappr.level-selector/latest/level-selector.min.js"></script>
+<div id="oper"></div>
+<div id="vid"></div>
+<script>
+ player = new Clappr.Player({
+ source: "https://live-streams-ssai-01.tonton.com.my/live/2dd2b7cd-1b34-4871-b669-57b5c9beca23/live.isml/live-audio_0=64000-video=849984.m3u8",
+ mimeType: "application/x-mpegURL",
+ autoPlay: true, 
+ height: "360",
+ width: "100%",
+ preload: 'auto',
+ plugins: {"core": [LevelSelector]}, 
+ parentId: "#vid"});
 </script>
